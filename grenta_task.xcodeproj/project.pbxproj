@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67E22BA785D7000CC4FF /* AppDelegate.swift */; };
+		1DBB67E52BA785D7000CC4FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67E42BA785D7000CC4FF /* SceneDelegate.swift */; };
+		1DBB67E72BA785D7000CC4FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67E62BA785D7000CC4FF /* ViewController.swift */; };
+		1DBB67EA2BA785D7000CC4FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB67E82BA785D7000CC4FF /* Main.storyboard */; };
+		1DBB67EC2BA785D9000CC4FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB67EB2BA785D9000CC4FF /* Assets.xcassets */; };
+		1DBB67EF2BA785D9000CC4FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DBB67ED2BA785D9000CC4FF /* LaunchScreen.storyboard */; };
+		1DBB67FA2BA785D9000CC4FF /* grenta_taskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67F92BA785D9000CC4FF /* grenta_taskTests.swift */; };
+		1DBB68042BA785D9000CC4FF /* grenta_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB68032BA785D9000CC4FF /* grenta_taskUITests.swift */; };
+		1DBB68062BA785D9000CC4FF /* grenta_taskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB68052BA785D9000CC4FF /* grenta_taskUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DBB67F62BA785D9000CC4FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DBB67D72BA785D7000CC4FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DBB67DE2BA785D7000CC4FF;
+			remoteInfo = grenta_task;
+		};
+		1DBB68002BA785D9000CC4FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DBB67D72BA785D7000CC4FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DBB67DE2BA785D7000CC4FF;
+			remoteInfo = grenta_task;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DBB67DF2BA785D7000CC4FF /* grenta_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grenta_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DBB67E22BA785D7000CC4FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DBB67E42BA785D7000CC4FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1DBB67E62BA785D7000CC4FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DBB67E92BA785D7000CC4FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DBB67EB2BA785D9000CC4FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DBB67EE2BA785D9000CC4FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DBB67F02BA785D9000CC4FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DBB67F52BA785D9000CC4FF /* grenta_taskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = grenta_taskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DBB67F92BA785D9000CC4FF /* grenta_taskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grenta_taskTests.swift; sourceTree = "<group>"; };
+		1DBB67FF2BA785D9000CC4FF /* grenta_taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = grenta_taskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DBB68032BA785D9000CC4FF /* grenta_taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grenta_taskUITests.swift; sourceTree = "<group>"; };
+		1DBB68052BA785D9000CC4FF /* grenta_taskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grenta_taskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DBB67DC2BA785D7000CC4FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DBB67F22BA785D9000CC4FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DBB67FC2BA785D9000CC4FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DBB67D62BA785D7000CC4FF = {
+			isa = PBXGroup;
+			children = (
+				1DBB67E12BA785D7000CC4FF /* grenta_task */,
+				1DBB67F82BA785D9000CC4FF /* grenta_taskTests */,
+				1DBB68022BA785D9000CC4FF /* grenta_taskUITests */,
+				1DBB67E02BA785D7000CC4FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DBB67E02BA785D7000CC4FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB67DF2BA785D7000CC4FF /* grenta_task.app */,
+				1DBB67F52BA785D9000CC4FF /* grenta_taskTests.xctest */,
+				1DBB67FF2BA785D9000CC4FF /* grenta_taskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DBB67E12BA785D7000CC4FF /* grenta_task */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB67E22BA785D7000CC4FF /* AppDelegate.swift */,
+				1DBB67E42BA785D7000CC4FF /* SceneDelegate.swift */,
+				1DBB67E62BA785D7000CC4FF /* ViewController.swift */,
+				1DBB67E82BA785D7000CC4FF /* Main.storyboard */,
+				1DBB67EB2BA785D9000CC4FF /* Assets.xcassets */,
+				1DBB67ED2BA785D9000CC4FF /* LaunchScreen.storyboard */,
+				1DBB67F02BA785D9000CC4FF /* Info.plist */,
+			);
+			path = grenta_task;
+			sourceTree = "<group>";
+		};
+		1DBB67F82BA785D9000CC4FF /* grenta_taskTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB67F92BA785D9000CC4FF /* grenta_taskTests.swift */,
+			);
+			path = grenta_taskTests;
+			sourceTree = "<group>";
+		};
+		1DBB68022BA785D9000CC4FF /* grenta_taskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB68032BA785D9000CC4FF /* grenta_taskUITests.swift */,
+				1DBB68052BA785D9000CC4FF /* grenta_taskUITestsLaunchTests.swift */,
+			);
+			path = grenta_taskUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DBB67DE2BA785D7000CC4FF /* grenta_task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DBB68092BA785D9000CC4FF /* Build configuration list for PBXNativeTarget "grenta_task" */;
+			buildPhases = (
+				1DBB67DB2BA785D7000CC4FF /* Sources */,
+				1DBB67DC2BA785D7000CC4FF /* Frameworks */,
+				1DBB67DD2BA785D7000CC4FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = grenta_task;
+			productName = grenta_task;
+			productReference = 1DBB67DF2BA785D7000CC4FF /* grenta_task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DBB67F42BA785D9000CC4FF /* grenta_taskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DBB680C2BA785D9000CC4FF /* Build configuration list for PBXNativeTarget "grenta_taskTests" */;
+			buildPhases = (
+				1DBB67F12BA785D9000CC4FF /* Sources */,
+				1DBB67F22BA785D9000CC4FF /* Frameworks */,
+				1DBB67F32BA785D9000CC4FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DBB67F72BA785D9000CC4FF /* PBXTargetDependency */,
+			);
+			name = grenta_taskTests;
+			productName = grenta_taskTests;
+			productReference = 1DBB67F52BA785D9000CC4FF /* grenta_taskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DBB67FE2BA785D9000CC4FF /* grenta_taskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DBB680F2BA785D9000CC4FF /* Build configuration list for PBXNativeTarget "grenta_taskUITests" */;
+			buildPhases = (
+				1DBB67FB2BA785D9000CC4FF /* Sources */,
+				1DBB67FC2BA785D9000CC4FF /* Frameworks */,
+				1DBB67FD2BA785D9000CC4FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DBB68012BA785D9000CC4FF /* PBXTargetDependency */,
+			);
+			name = grenta_taskUITests;
+			productName = grenta_taskUITests;
+			productReference = 1DBB67FF2BA785D9000CC4FF /* grenta_taskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DBB67D72BA785D7000CC4FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					1DBB67DE2BA785D7000CC4FF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					1DBB67F42BA785D9000CC4FF = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 1DBB67DE2BA785D7000CC4FF;
+					};
+					1DBB67FE2BA785D9000CC4FF = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 1DBB67DE2BA785D7000CC4FF;
+					};
+				};
+			};
+			buildConfigurationList = 1DBB67DA2BA785D7000CC4FF /* Build configuration list for PBXProject "grenta_task" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DBB67D62BA785D7000CC4FF;
+			productRefGroup = 1DBB67E02BA785D7000CC4FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DBB67DE2BA785D7000CC4FF /* grenta_task */,
+				1DBB67F42BA785D9000CC4FF /* grenta_taskTests */,
+				1DBB67FE2BA785D9000CC4FF /* grenta_taskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DBB67DD2BA785D7000CC4FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DBB67EF2BA785D9000CC4FF /* LaunchScreen.storyboard in Resources */,
+				1DBB67EC2BA785D9000CC4FF /* Assets.xcassets in Resources */,
+				1DBB67EA2BA785D7000CC4FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DBB67F32BA785D9000CC4FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DBB67FD2BA785D9000CC4FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DBB67DB2BA785D7000CC4FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DBB67E72BA785D7000CC4FF /* ViewController.swift in Sources */,
+				1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */,
+				1DBB67E52BA785D7000CC4FF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DBB67F12BA785D9000CC4FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DBB67FA2BA785D9000CC4FF /* grenta_taskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DBB67FB2BA785D9000CC4FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DBB68062BA785D9000CC4FF /* grenta_taskUITestsLaunchTests.swift in Sources */,
+				1DBB68042BA785D9000CC4FF /* grenta_taskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DBB67F72BA785D9000CC4FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DBB67DE2BA785D7000CC4FF /* grenta_task */;
+			targetProxy = 1DBB67F62BA785D9000CC4FF /* PBXContainerItemProxy */;
+		};
+		1DBB68012BA785D9000CC4FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DBB67DE2BA785D7000CC4FF /* grenta_task */;
+			targetProxy = 1DBB68002BA785D9000CC4FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1DBB67E82BA785D7000CC4FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DBB67E92BA785D7000CC4FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DBB67ED2BA785D9000CC4FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DBB67EE2BA785D9000CC4FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DBB68072BA785D9000CC4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DBB68082BA785D9000CC4FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DBB680A2BA785D9000CC4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S84559HK9V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = grenta_task/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr-koritem.grenta-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DBB680B2BA785D9000CC4FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S84559HK9V;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = grenta_task/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr-koritem.grenta-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DBB680D2BA785D9000CC4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S84559HK9V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr-koritem.grenta-taskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/grenta_task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/grenta_task";
+			};
+			name = Debug;
+		};
+		1DBB680E2BA785D9000CC4FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S84559HK9V;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr-koritem.grenta-taskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/grenta_task.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/grenta_task";
+			};
+			name = Release;
+		};
+		1DBB68102BA785D9000CC4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S84559HK9V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr-koritem.grenta-taskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = grenta_task;
+			};
+			name = Debug;
+		};
+		1DBB68112BA785D9000CC4FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S84559HK9V;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amr-koritem.grenta-taskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = grenta_task;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DBB67DA2BA785D7000CC4FF /* Build configuration list for PBXProject "grenta_task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBB68072BA785D9000CC4FF /* Debug */,
+				1DBB68082BA785D9000CC4FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DBB68092BA785D9000CC4FF /* Build configuration list for PBXNativeTarget "grenta_task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBB680A2BA785D9000CC4FF /* Debug */,
+				1DBB680B2BA785D9000CC4FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DBB680C2BA785D9000CC4FF /* Build configuration list for PBXNativeTarget "grenta_taskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBB680D2BA785D9000CC4FF /* Debug */,
+				1DBB680E2BA785D9000CC4FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DBB680F2BA785D9000CC4FF /* Build configuration list for PBXNativeTarget "grenta_taskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBB68102BA785D9000CC4FF /* Debug */,
+				1DBB68112BA785D9000CC4FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DBB67D72BA785D7000CC4FF /* Project object */;
+}
