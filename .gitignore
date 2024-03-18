@@ -1,0 +1,33 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+## Build Generated
+DerivedData/*
+
+##  xcode user’s preferences
+*.pbxuser
+
+## xcode user’s prespective
+*.perspectivev3
+
+## layout information and breakpoints
+*.mode1v3
+
+## binary file to store an iOS app
+*.ipa
+
+## debug symbols file
+*.dSYM
+*.dSYM.zip
+
+##user data
+xcuserdata/
+
+## user state
+*.xcuserstate
+
+## xcode deprecated files
+*.moved-aside
+
+
+##CocoaPods
+Pods/*
+Podfile.lock
