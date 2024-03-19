@@ -9,7 +9,12 @@ import Foundation
 
 extension Data {
     func get<T: Codable>(_ class: T.Type) -> T? {
-        try? JSONDecoder().decode(T.self, from: self)
+        do {
+            return try JSONDecoder().decode(T.self, from: self)
+        } catch {
+            printInDebug("\(error)")
+            return nil
+        }
     }
 }
 

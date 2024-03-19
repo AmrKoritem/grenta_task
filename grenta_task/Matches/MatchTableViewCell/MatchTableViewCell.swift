@@ -22,9 +22,10 @@ class MatchTableViewCell: UITableViewCell {
 extension MatchTableViewCell {
     func setMatch(_ match: Match) {
         let isDraw = match.score.winner == .draw
-        let result = match.winnerTeam?.name
-        let time = match.time
-        let isTime = result == nil && isDraw
+        let winner = match.winnerTeam?.name
+        let result = isDraw ? "Draw" : "Winner is: \(winner ?? "")"
+        let time = "Starts on: \(match.time ?? "")"
+        let isTime = winner == nil && !isDraw
         setLabels(
             homeTeam: match.homeTeam.name,
             awayTeam: match.awayTeam.name,

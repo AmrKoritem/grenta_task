@@ -13,11 +13,11 @@ struct Match: Codable {
     let competition: Competition
     let season: Season
     let id: Int
-    let utcDate: Date
+    let utcDate: String
     let status: String
     let matchday: Int
     let stage: String
-    let lastUpdated: Date
+    let lastUpdated: String
     let homeTeam, awayTeam: Team
     let score: Score
     let odds: Odds
@@ -34,6 +34,7 @@ struct Match: Codable {
         }
     }
     var time: String? {
-        return utcDate.toString(withFormat: "HH:mm")
+        let date = utcDate.toDate(withFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
+        return date?.toString(withFormat: "HH:mm")
     }
 }

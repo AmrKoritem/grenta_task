@@ -14,31 +14,14 @@ protocol NetworkManagerProtocol {
     @discardableResult func request(_ request: DataRequest) async -> (status: Int?, data: Data?)
 }
 
-struct DataRequest {
-    let url: String
-    let method: HTTPMethod
-    let parameters: Parameters?
-    let headers: HTTPHeaders?
-
-    init(
-        url: String,
-        method: HTTPMethod,
-        parameters: Parameters? = nil,
-        headers: HTTPHeaders? = nil
-    ) {
-        self.url = url
-        self.method = method
-        self.parameters = parameters
-        self.headers = headers
-    }
-}
-
 class NetworkManager: NetworkManagerProtocol {
     static let notConnectedStatus = 1010
     static let shared = NetworkManager()
 
     var isConnected: Bool { NetworkReachabilityManager()?.isReachable ?? false }
-    var defaultHeader: HTTPHeaders { [:] }
+    var defaultHeader: HTTPHeaders { [
+        String.Keys.auth.rawValue : Constants.token.rawValue
+    ] }
     var baseUrl: String { String.Urls.base.rawValue }
 
     private init() {}
@@ -52,16 +35,17 @@ class NetworkManager: NetworkManagerProtocol {
     private func request(_ request: DataRequest, encoding: ParameterEncoding) async -> (status: Int?, data: Data?) {
         guard isConnected else { return (NetworkManager.notConnectedStatus, nil) }
         let reqUrl = baseUrl.appending(request.url)
+        let headers = defaultHeader.added(request.headers ?? [:])
         let timeBefore = Date()
         let req = AF.request(
             reqUrl,
             method: request.method,
             parameters: request.parameters,
             encoding: encoding,
-            headers: request.headers)
+            headers: headers)
         let response = await req.serializingData().response
         let timeAfter = Date()
-        printInDebug("headers: \(String(describing: request.headers))")
+        printInDebug("headers: \(String(describing: headers))")
         printInDebug("url: \(reqUrl)")
         printInDebug("type: \(request.method.rawValue)")
         printInDebug("parameters: \(request.parameters ?? [:])")
@@ -88,10 +72,22 @@ class NetworkManager: NetworkManagerProtocol {
             return (response.response?.statusCode, response.data)
         }
     }
+}
 
-    func printInDebug(_ string: String) {
-        #if DEBUG
-        print(string)
-        #endif
+extension HTTPHeaders {
+    mutating func add(_ headers: HTTPHeaders) {
+        headers.forEach { add($0) }
     }
+
+    func added(_ headers: HTTPHeaders) -> HTTPHeaders {
+        var newHeaders = self
+        newHeaders.add(headers)
+        return newHeaders
+    }
+}
+
+func printInDebug(_ string: String) {
+    #if DEBUG
+    print(string)
+    #endif
 }

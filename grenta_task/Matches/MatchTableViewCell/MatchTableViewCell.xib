@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,42 +17,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="home team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTT-a2-LLJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="home team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTT-a2-LLJ">
                         <rect key="frame" x="46.333333333333336" y="8.3333333333333339" width="90.333333333333314" height="21.666666666666664"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="away team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXh-fn-ask">
-                        <rect key="frame" x="183.33333333333334" y="8.6666666666666643" width="85.666666666666657" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="away team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXh-fn-ask">
+                        <rect key="frame" x="183.33333333333334" y="8.3333333333333339" width="85.666666666666657" height="21.666666666666664"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OY-0o-dQi">
-                        <rect key="frame" x="151.66666666666666" y="10" width="16.666666666666657" height="18"/>
+                        <rect key="frame" x="151.66666666666666" y="9.9999999999999982" width="16.666666666666657" height="18.333333333333329"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result or time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-My-368">
-                        <rect key="frame" x="109.66666666666669" y="44" width="101" height="21"/>
+                        <rect key="frame" x="109.66666666666669" y="44.333333333333336" width="101" height="20.666666666666664"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" systemColor="systemBlueColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="kTT-a2-LLJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8.3333333333333339" id="09p-Or-KKe"/>
                     <constraint firstItem="mi4-My-368" firstAttribute="centerX" secondItem="8OY-0o-dQi" secondAttribute="centerX" id="7Qg-ei-QzL"/>
                     <constraint firstItem="kTT-a2-LLJ" firstAttribute="centerY" secondItem="8OY-0o-dQi" secondAttribute="centerY" id="Cac-39-qeF"/>
                     <constraint firstItem="kTT-a2-LLJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Jus-22-qBI"/>
                     <constraint firstItem="WXh-fn-ask" firstAttribute="leading" secondItem="8OY-0o-dQi" secondAttribute="trailing" constant="15" id="N7O-Su-LiI"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WXh-fn-ask" secondAttribute="trailing" constant="10" id="SqQ-C4-Pmx"/>
-                    <constraint firstItem="mi4-My-368" firstAttribute="top" secondItem="8OY-0o-dQi" secondAttribute="bottom" constant="16" id="Y5W-31-4dS"/>
+                    <constraint firstItem="mi4-My-368" firstAttribute="top" secondItem="8OY-0o-dQi" secondAttribute="bottom" priority="999" constant="16" id="Y5W-31-4dS"/>
+                    <constraint firstItem="mi4-My-368" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kTT-a2-LLJ" secondAttribute="bottom" constant="14.333333333333336" id="a7P-l2-v2r"/>
                     <constraint firstItem="8OY-0o-dQi" firstAttribute="leading" secondItem="kTT-a2-LLJ" secondAttribute="trailing" constant="15" id="dGs-oy-wfw"/>
                     <constraint firstItem="8OY-0o-dQi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="dpK-nB-1zP"/>
-                    <constraint firstItem="8OY-0o-dQi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="v5v-GD-Ohx"/>
+                    <constraint firstItem="8OY-0o-dQi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" priority="999" constant="10" id="v5v-GD-Ohx"/>
                     <constraint firstAttribute="bottom" secondItem="mi4-My-368" secondAttribute="bottom" constant="15" id="xKn-vp-MDc"/>
+                    <constraint firstItem="WXh-fn-ask" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8.3333333333333339" id="xLf-ef-Io7"/>
+                    <constraint firstItem="mi4-My-368" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WXh-fn-ask" secondAttribute="bottom" constant="14.333333333333336" id="yeZ-xv-Cf7"/>
                     <constraint firstItem="WXh-fn-ask" firstAttribute="centerY" secondItem="8OY-0o-dQi" secondAttribute="centerY" id="znm-Mc-wIb"/>
                 </constraints>
             </tableViewCellContentView>
@@ -64,4 +69,12 @@
             <point key="canvasLocation" x="138.93129770992365" y="41.549295774647888"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

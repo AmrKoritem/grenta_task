@@ -14,10 +14,4 @@ struct Team: Codable {
     let shortName: String
     let tla: String
     let crest: String
-    let address: String
-    let website: String
-    let founded: Int
-    let clubColors: String
-    let venue: String
-    let lastUpdated: Date
 }
