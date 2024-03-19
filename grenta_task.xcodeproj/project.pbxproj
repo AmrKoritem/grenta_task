@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1D2E4D5B2BA80255004E13E0 /* TableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D5A2BA80254004E13E0 /* TableViews.swift */; };
+		1D2E4D5F2BA80470004E13E0 /* MatchesListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D5E2BA80470004E13E0 /* MatchesListResponse.swift */; };
+		1D2E4D612BAA2429004E13E0 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D602BAA2429004E13E0 /* Match.swift */; };
+		1D2E4D632BAA246B004E13E0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D622BAA246B004E13E0 /* Team.swift */; };
+		1D2E4D652BAA24A0004E13E0 /* MatchUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D642BAA24A0004E13E0 /* MatchUtilities.swift */; };
+		1D2E4D672BAA24C4004E13E0 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D662BAA24C4004E13E0 /* String+Date.swift */; };
 		1D9D3DE12BA7FE2100CA0BB7 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */; };
 		1D9D3DE22BA7FE2100CA0BB7 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */; };
 		1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67E22BA785D7000CC4FF /* AppDelegate.swift */; };
@@ -40,6 +45,11 @@
 
 /* Begin PBXFileReference section */
 		1D2E4D5A2BA80254004E13E0 /* TableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViews.swift; sourceTree = "<group>"; };
+		1D2E4D5E2BA80470004E13E0 /* MatchesListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesListResponse.swift; sourceTree = "<group>"; };
+		1D2E4D602BAA2429004E13E0 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		1D2E4D622BAA246B004E13E0 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		1D2E4D642BAA24A0004E13E0 /* MatchUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchUtilities.swift; sourceTree = "<group>"; };
+		1D2E4D662BAA24C4004E13E0 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		1DBB67DF2BA785D7000CC4FF /* grenta_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grenta_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +96,20 @@
 			isa = PBXGroup;
 			children = (
 				1D2E4D5A2BA80254004E13E0 /* TableViews.swift */,
+				1D2E4D662BAA24C4004E13E0 /* String+Date.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D2E4D5D2BA8042F004E13E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D2E4D5E2BA80470004E13E0 /* MatchesListResponse.swift */,
+				1D2E4D602BAA2429004E13E0 /* Match.swift */,
+				1D2E4D622BAA246B004E13E0 /* Team.swift */,
+				1D2E4D642BAA24A0004E13E0 /* MatchUtilities.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1D9D3DDE2BA7FDEB00CA0BB7 /* MatchTableViewCell */ = {
@@ -142,6 +164,7 @@
 		1DBB67E12BA785D7000CC4FF /* grenta_task */ = {
 			isa = PBXGroup;
 			children = (
+				1D2E4D5D2BA8042F004E13E0 /* Models */,
 				1D2E4D5C2BA802D7004E13E0 /* Extensions */,
 				1D9D3DE42BA800CB00CA0BB7 /* Matches */,
 				1D9D3DE32BA800A600CA0BB7 /* Support Files */,
@@ -300,11 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D2E4D672BAA24C4004E13E0 /* String+Date.swift in Sources */,
 				1DBB67E72BA785D7000CC4FF /* MatchesListViewController.swift in Sources */,
 				1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */,
+				1D2E4D652BAA24A0004E13E0 /* MatchUtilities.swift in Sources */,
+				1D2E4D5F2BA80470004E13E0 /* MatchesListResponse.swift in Sources */,
 				1DBB67E52BA785D7000CC4FF /* SceneDelegate.swift in Sources */,
+				1D2E4D632BAA246B004E13E0 /* Team.swift in Sources */,
 				1D9D3DE12BA7FE2100CA0BB7 /* MatchTableViewCell.swift in Sources */,
 				1D2E4D5B2BA80255004E13E0 /* TableViews.swift in Sources */,
+				1D2E4D612BAA2429004E13E0 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
