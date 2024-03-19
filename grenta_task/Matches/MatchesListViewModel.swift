@@ -12,12 +12,15 @@ typealias ErrorMessage = String
 protocol MatchesListViewModelDelegate: AnyObject {}
 
 protocol MatchesListViewModelProtocol {
-    var matches: [Match] { get }
+    var matchesPerDay: [String : [Match]] { get }
+    var days: [String] { get }
     func getMatches() async -> ErrorMessage?
 }
 
 class MatchesListViewModel: MatchesListViewModelProtocol {
     var matches: [Match] = []
+    var matchesPerDay: [String : [Match]] = [:]
+    var days: [String] = []
 
     private weak var delegate: MatchesListViewModelDelegate?
     
@@ -48,6 +51,10 @@ class MatchesListViewModel: MatchesListViewModelProtocol {
         }
         let response = data?.get(MatchesListResponse.self)
         matches = response?.matches ?? []
+        days = matches.compactMap { $0.date }.uniqued
+        days.forEach { day in
+            matchesPerDay[day] = matches.filter { $0.date == day }
+        }
         return nil
     }
 }

@@ -37,4 +37,8 @@ struct Match: Codable {
         let date = utcDate.toDate(withFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
         return date?.toString(withFormat: "HH:mm")
     }
+    var date: String? {
+        let date = utcDate.toDate(withFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
+        return date?.toString(withFormat: "yyyy-MM-dd")
+    }
 }
