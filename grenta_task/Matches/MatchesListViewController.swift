@@ -10,6 +10,7 @@ import Toast
 
 class MatchesListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     lazy var matchesViewModel: MatchesListViewModelProtocol = MatchesListViewModel(self)
     
@@ -27,7 +28,9 @@ class MatchesListViewController: UIViewController {
     
     func getMatches() {
         Task {
+            indicator.isHidden = false
             let errorMessage = await matchesViewModel.getMatches()
+            indicator.isHidden = true
             guard let errorMessage else {
                 tableView.reloadData()
                 return
