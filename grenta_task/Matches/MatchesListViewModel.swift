@@ -23,10 +23,11 @@ class MatchesListViewModel: MatchesListViewModelProtocol {
 
     private weak var delegate: MatchesListViewModelDelegate?
     
-    private let networkManager = NetworkManager.shared
+    let networkManager: NetworkManagerProtocol
 
-    init(_ delegate: MatchesListViewModelDelegate) {
+    init(_ delegate: MatchesListViewModelDelegate, networkManager: NetworkManagerProtocol? = nil) {
         self.delegate = delegate
+        self.networkManager = networkManager ?? NetworkManager.shared
     }
     
     func setMatch(_ matchId: Int, isFavourite: Bool) {
@@ -42,11 +43,11 @@ class MatchesListViewModel: MatchesListViewModelProtocol {
 
     func getMatches() async -> ErrorMessage? {
         let today = Date()
-        let nextYear = Calendar.current.date(byAdding: .day, value: 1, to: Date())
+        let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: Date())
         let format = "yyyy-MM-dd"
         let filters = [
             String.Filter.dateFrom : today.toString(withFormat: format),
-            String.Filter.dateTo : nextYear?.toString(withFormat: format)
+            String.Filter.dateTo : nextMonth?.toString(withFormat: format)
         ]
         let url = String.Urls.matches.withFilters(filters)
         let request = DataRequest(
