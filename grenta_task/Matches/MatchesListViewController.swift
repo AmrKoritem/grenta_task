@@ -59,10 +59,15 @@ extension MatchesListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MatchTableViewCell.reuseIdentifier, for: indexPath)
+        cell.selectionStyle = .none
         let day = matchesViewModel.days[indexPath.section]
         guard let match = matchesViewModel.matchesPerDay[day]?[indexPath.row] else { return cell }
         let matchCell = cell as? MatchTableViewCell
         matchCell?.setMatch(match)
+        matchCell?.toggleFavouriteHandler = { [weak self] in
+            self?.matchesViewModel.setMatch(match.id, isFavourite: !match.isFavourite)
+            self?.tableView.reloadRows(at: [indexPath], with: .none)
+        }
         return cell
     }
 }

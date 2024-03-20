@@ -23,6 +23,9 @@
 		1D2E4D7D2BAA353A004E13E0 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 1D2E4D7C2BAA353A004E13E0 /* Toast */; };
 		1D2E4D7F2BAA36AF004E13E0 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D7E2BAA36AF004E13E0 /* ApiError.swift */; };
 		1D2E4D812BAA45D4004E13E0 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D802BAA45D4004E13E0 /* Collection.swift */; };
+		1D2E4D832BAA59F0004E13E0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D822BAA59F0004E13E0 /* Keys.swift */; };
+		1D2E4D852BAA5A1A004E13E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D842BAA5A1A004E13E0 /* Constants.swift */; };
+		1D2E4D872BAA5BBE004E13E0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D862BAA5BBE004E13E0 /* UserDefaults.swift */; };
 		1D9D3DE12BA7FE2100CA0BB7 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */; };
 		1D9D3DE22BA7FE2100CA0BB7 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */; };
 		1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67E22BA785D7000CC4FF /* AppDelegate.swift */; };
@@ -68,6 +71,9 @@
 		1D2E4D772BAA3275004E13E0 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		1D2E4D7E2BAA36AF004E13E0 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		1D2E4D802BAA45D4004E13E0 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		1D2E4D822BAA59F0004E13E0 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		1D2E4D842BAA5A1A004E13E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1D2E4D862BAA5BBE004E13E0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		1DBB67DF2BA785D7000CC4FF /* grenta_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grenta_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,7 @@
 				1D2E4D702BAA2B61004E13E0 /* Codable.swift */,
 				1D2E4D722BAA2E01004E13E0 /* Data.swift */,
 				1D2E4D802BAA45D4004E13E0 /* Collection.swift */,
+				1D2E4D862BAA5BBE004E13E0 /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				1D2E4D752BAA2E40004E13E0 /* Urls.swift */,
+				1D2E4D822BAA59F0004E13E0 /* Keys.swift */,
+				1D2E4D842BAA5A1A004E13E0 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -380,7 +389,9 @@
 				1D2E4D672BAA24C4004E13E0 /* String+Date.swift in Sources */,
 				1DBB67E72BA785D7000CC4FF /* MatchesListViewController.swift in Sources */,
 				1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */,
+				1D2E4D872BAA5BBE004E13E0 /* UserDefaults.swift in Sources */,
 				1D2E4D652BAA24A0004E13E0 /* MatchUtilities.swift in Sources */,
+				1D2E4D832BAA59F0004E13E0 /* Keys.swift in Sources */,
 				1D2E4D5F2BA80470004E13E0 /* MatchesListResponse.swift in Sources */,
 				1DBB67E52BA785D7000CC4FF /* SceneDelegate.swift in Sources */,
 				1D2E4D732BAA2E01004E13E0 /* Data.swift in Sources */,
@@ -389,6 +400,7 @@
 				1D2E4D762BAA2E40004E13E0 /* Urls.swift in Sources */,
 				1D9D3DE12BA7FE2100CA0BB7 /* MatchTableViewCell.swift in Sources */,
 				1D2E4D712BAA2B61004E13E0 /* Codable.swift in Sources */,
+				1D2E4D852BAA5A1A004E13E0 /* Constants.swift in Sources */,
 				1D2E4D692BAA25EB004E13E0 /* MatchesListViewModel.swift in Sources */,
 				1D2E4D5B2BA80255004E13E0 /* TableViews.swift in Sources */,
 				1D2E4D612BAA2429004E13E0 /* Match.swift in Sources */,

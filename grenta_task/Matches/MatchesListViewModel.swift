@@ -14,6 +14,7 @@ protocol MatchesListViewModelDelegate: AnyObject {}
 protocol MatchesListViewModelProtocol {
     var matchesPerDay: [String : [Match]] { get }
     var days: [String] { get }
+    func setMatch(_ matchId: Int, isFavourite: Bool)
     func getMatches() async -> ErrorMessage?
 }
 
@@ -28,6 +29,17 @@ class MatchesListViewModel: MatchesListViewModelProtocol {
 
     init(_ delegate: MatchesListViewModelDelegate) {
         self.delegate = delegate
+    }
+    
+    func setMatch(_ matchId: Int, isFavourite: Bool) {
+        var favouriteMatches = UserDefaults.favouriteMatches
+        if isFavourite {
+            guard !favouriteMatches.contains(matchId) else { return }
+            favouriteMatches.append(matchId)
+        } else {
+            favouriteMatches.removeAll { $0 == matchId }
+        }
+        UserDefaults.standard.set(favouriteMatches, forKey: UserDefaults.Keys.favourites.rawValue)
     }
 
     func getMatches() async -> ErrorMessage? {
