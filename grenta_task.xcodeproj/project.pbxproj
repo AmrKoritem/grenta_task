@@ -26,6 +26,7 @@
 		1D2E4D832BAA59F0004E13E0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D822BAA59F0004E13E0 /* Keys.swift */; };
 		1D2E4D852BAA5A1A004E13E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D842BAA5A1A004E13E0 /* Constants.swift */; };
 		1D2E4D872BAA5BBE004E13E0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D862BAA5BBE004E13E0 /* UserDefaults.swift */; };
+		1D2E4D892BAAB515004E13E0 /* FavouritesMatchesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D882BAAB515004E13E0 /* FavouritesMatchesDelegate.swift */; };
 		1D9D3DE12BA7FE2100CA0BB7 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */; };
 		1D9D3DE22BA7FE2100CA0BB7 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */; };
 		1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67E22BA785D7000CC4FF /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		1D2E4D822BAA59F0004E13E0 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		1D2E4D842BAA5A1A004E13E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1D2E4D862BAA5BBE004E13E0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		1D2E4D882BAAB515004E13E0 /* FavouritesMatchesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesMatchesDelegate.swift; sourceTree = "<group>"; };
 		1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		1DBB67DF2BA785D7000CC4FF /* grenta_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grenta_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 			children = (
 				1D2E4D682BAA25EB004E13E0 /* MatchesListViewModel.swift */,
 				1DBB67E62BA785D7000CC4FF /* MatchesListViewController.swift */,
+				1D2E4D882BAAB515004E13E0 /* FavouritesMatchesDelegate.swift */,
 				1DBB67E82BA785D7000CC4FF /* Main.storyboard */,
 				1D9D3DDE2BA7FDEB00CA0BB7 /* MatchTableViewCell */,
 			);
@@ -402,6 +405,7 @@
 				1D2E4D712BAA2B61004E13E0 /* Codable.swift in Sources */,
 				1D2E4D852BAA5A1A004E13E0 /* Constants.swift in Sources */,
 				1D2E4D692BAA25EB004E13E0 /* MatchesListViewModel.swift in Sources */,
+				1D2E4D892BAAB515004E13E0 /* FavouritesMatchesDelegate.swift in Sources */,
 				1D2E4D5B2BA80255004E13E0 /* TableViews.swift in Sources */,
 				1D2E4D612BAA2429004E13E0 /* Match.swift in Sources */,
 				1D2E4D782BAA3275004E13E0 /* DataRequest.swift in Sources */,

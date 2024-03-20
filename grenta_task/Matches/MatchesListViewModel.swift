@@ -13,7 +13,6 @@ protocol MatchesListViewModelDelegate: AnyObject {}
 
 protocol MatchesListViewModelProtocol {
     var matchesPerDay: [String : [Match]] { get }
-    var days: [String] { get }
     func setMatch(_ matchId: Int, isFavourite: Bool)
     func getMatches() async -> ErrorMessage?
 }
@@ -21,7 +20,6 @@ protocol MatchesListViewModelProtocol {
 class MatchesListViewModel: MatchesListViewModelProtocol {
     var matches: [Match] = []
     var matchesPerDay: [String : [Match]] = [:]
-    var days: [String] = []
 
     private weak var delegate: MatchesListViewModelDelegate?
     
@@ -44,7 +42,7 @@ class MatchesListViewModel: MatchesListViewModelProtocol {
 
     func getMatches() async -> ErrorMessage? {
         let today = Date()
-        let nextYear = Calendar.current.date(byAdding: .year, value: 1, to: Date())
+        let nextYear = Calendar.current.date(byAdding: .day, value: 1, to: Date())
         let format = "yyyy-MM-dd"
         let filters = [
             String.Filter.dateFrom : today.toString(withFormat: format),
@@ -63,8 +61,8 @@ class MatchesListViewModel: MatchesListViewModelProtocol {
         }
         let response = data?.get(MatchesListResponse.self)
         matches = response?.matches ?? []
-        days = matches.compactMap { $0.date }.uniqued
-        days.forEach { day in
+        matches.forEach { match in
+            guard let day = match.date else { return }
             matchesPerDay[day] = matches.filter { $0.date == day }
         }
         return nil
