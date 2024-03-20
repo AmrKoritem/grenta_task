@@ -28,6 +28,8 @@
 		1D2E4D872BAA5BBE004E13E0 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D862BAA5BBE004E13E0 /* UserDefaults.swift */; };
 		1D2E4D892BAAB515004E13E0 /* FavouritesMatchesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D882BAAB515004E13E0 /* FavouritesMatchesDelegate.swift */; };
 		1D2E4D8C2BAAB938004E13E0 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D8B2BAAB938004E13E0 /* NetworkManagerMock.swift */; };
+		1D2E4D8E2BAAC353004E13E0 /* UserDefaultsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E4D8D2BAAC353004E13E0 /* UserDefaultsMock.swift */; };
+		1D2E4D932BAACC12004E13E0 /* mockMatches.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E4D922BAACC12004E13E0 /* mockMatches.json */; };
 		1D9D3DE12BA7FE2100CA0BB7 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */; };
 		1D9D3DE22BA7FE2100CA0BB7 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */; };
 		1DBB67E32BA785D7000CC4FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB67E22BA785D7000CC4FF /* AppDelegate.swift */; };
@@ -77,8 +79,9 @@
 		1D2E4D842BAA5A1A004E13E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1D2E4D862BAA5BBE004E13E0 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		1D2E4D882BAAB515004E13E0 /* FavouritesMatchesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesMatchesDelegate.swift; sourceTree = "<group>"; };
-		1D2E4D8A2BAAB702004E13E0 /* mockMatches.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = mockMatches.geojson; sourceTree = "<group>"; };
 		1D2E4D8B2BAAB938004E13E0 /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
+		1D2E4D8D2BAAC353004E13E0 /* UserDefaultsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMock.swift; sourceTree = "<group>"; };
+		1D2E4D922BAACC12004E13E0 /* mockMatches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockMatches.json; sourceTree = "<group>"; };
 		1D9D3DDF2BA7FE2100CA0BB7 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		1D9D3DE02BA7FE2100CA0BB7 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		1DBB67DF2BA785D7000CC4FF /* grenta_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grenta_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,9 +239,10 @@
 		1DBB67F82BA785D9000CC4FF /* grenta_taskTests */ = {
 			isa = PBXGroup;
 			children = (
+				1D2E4D922BAACC12004E13E0 /* mockMatches.json */,
 				1DBB67F92BA785D9000CC4FF /* ViewModelTests.swift */,
-				1D2E4D8A2BAAB702004E13E0 /* mockMatches.geojson */,
 				1D2E4D8B2BAAB938004E13E0 /* NetworkManagerMock.swift */,
+				1D2E4D8D2BAAC353004E13E0 /* UserDefaultsMock.swift */,
 			);
 			path = grenta_taskTests;
 			sourceTree = "<group>";
@@ -375,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D2E4D932BAACC12004E13E0 /* mockMatches.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D2E4D8E2BAAC353004E13E0 /* UserDefaultsMock.swift in Sources */,
 				1D2E4D8C2BAAB938004E13E0 /* NetworkManagerMock.swift in Sources */,
 				1DBB67FA2BA785D9000CC4FF /* ViewModelTests.swift in Sources */,
 			);

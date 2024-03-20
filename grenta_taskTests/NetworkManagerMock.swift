@@ -14,10 +14,10 @@ class NetworkManagerMock: NetworkManagerProtocol {
     var baseUrl: String { "" }
     
     func request(_ request: grenta_task.DataRequest) async -> (status: Int?, data: Data?) {
-        guard let path = Bundle.main.path(forResource: "mockMatches", ofType: "json") else { return (nil, nil) }
+        guard let path = Bundle(for: type(of: self)).path(forResource: "mockMatches", ofType: "json") else { return (nil, nil) }
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            return (nil, data)
+            return (200, data)
         } catch {
             printInDebug("\(error)")
             return (nil, nil)

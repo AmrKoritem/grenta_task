@@ -10,19 +10,28 @@ import XCTest
 
 final class ViewModelTests: XCTestCase, MatchesListViewModelDelegate {
     var viewModel: MatchesListViewModelProtocol?
+    let userDefaults = UserDefaultsMock()
 
     override func setUpWithError() throws {
-        viewModel = MatchesListViewModel(self, networkManager: NetworkManagerMock())
+        viewModel = MatchesListViewModel(self, networkManager: NetworkManagerMock(), userDefaults: userDefaults)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
     func testGetMatches() async {
         let error = await viewModel?.getMatches()
         XCTAssertNil(error)
         XCTAssertEqual(viewModel?.matchesPerDay.keys.count, 2)
         XCTAssertFalse(viewModel?.matchesPerDay.values.first?.isEmpty ?? true)
+    }
+
+    func testSetFavourite() async {
+        await viewModel?.getMatches()
+        guard let matchId = viewModel?.matchesPerDay["2023-08-11"]?.first?.id else {
+            XCTFail("match not found")
+            return
+        }
+        viewModel?.setMatch(matchId, isFavourite: true)
+        XCTAssertTrue(userDefaults.favouriteMatches.contains(matchId))
+        viewModel?.setMatch(matchId, isFavourite: false)
+        XCTAssertFalse(userDefaults.favouriteMatches.contains(matchId))
     }
 }

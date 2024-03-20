@@ -41,7 +41,4 @@ struct Match: Codable {
         let date = utcDate.toDate(withFormat: "yyyy-MM-dd'T'HH:mm:ssZ")
         return date?.toString(withFormat: "yyyy-MM-dd")
     }
-    var isFavourite: Bool {
-        return UserDefaults.favouriteMatches.contains(id)
-    }
 }

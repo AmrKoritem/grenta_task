@@ -14,7 +14,8 @@ protocol MatchesListViewModelDelegate: AnyObject {}
 protocol MatchesListViewModelProtocol {
     var matchesPerDay: [String : [Match]] { get }
     func setMatch(_ matchId: Int, isFavourite: Bool)
-    func getMatches() async -> ErrorMessage?
+    func getIsFavouriteMatch(_ match: Match) -> Bool
+    @discardableResult func getMatches() async -> ErrorMessage?
 }
 
 class MatchesListViewModel: MatchesListViewModelProtocol {
@@ -24,24 +25,34 @@ class MatchesListViewModel: MatchesListViewModelProtocol {
     private weak var delegate: MatchesListViewModelDelegate?
     
     let networkManager: NetworkManagerProtocol
+    let userDefaults: UserDefaultsProtocol
 
-    init(_ delegate: MatchesListViewModelDelegate, networkManager: NetworkManagerProtocol? = nil) {
+    init(
+        _ delegate: MatchesListViewModelDelegate,
+        networkManager: NetworkManagerProtocol? = nil,
+        userDefaults: UserDefaultsProtocol? = nil
+    ) {
         self.delegate = delegate
         self.networkManager = networkManager ?? NetworkManager.shared
+        self.userDefaults = userDefaults ?? UserDefaults.standard
+    }
+    
+    func getIsFavouriteMatch(_ match: Match) -> Bool {
+        return userDefaults.favouriteMatches.contains(match.id)
     }
     
     func setMatch(_ matchId: Int, isFavourite: Bool) {
-        var favouriteMatches = UserDefaults.favouriteMatches
+        var favouriteMatches = userDefaults.favouriteMatches
         if isFavourite {
             guard !favouriteMatches.contains(matchId) else { return }
             favouriteMatches.append(matchId)
         } else {
             favouriteMatches.removeAll { $0 == matchId }
         }
-        UserDefaults.standard.set(favouriteMatches, forKey: UserDefaults.Keys.favourites.rawValue)
+        userDefaults.set(favouriteMatches, forKey: UserDefaults.Keys.favourites.rawValue)
     }
 
-    func getMatches() async -> ErrorMessage? {
+    @discardableResult func getMatches() async -> ErrorMessage? {
         let today = Date()
         let nextMonth = Calendar.current.date(byAdding: .month, value: 1, to: Date())
         let format = "yyyy-MM-dd"

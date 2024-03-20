@@ -41,6 +41,5 @@ extension MatchTableViewCell {
             homeTeam: match.homeTeam.name,
             awayTeam: match.awayTeam.name,
             resultOrTime: isTime ? time : result)
-        setFavourite(match.isFavourite)
     }
 }

@@ -7,8 +7,13 @@
 
 import Foundation
 
-extension UserDefaults {
-    static var favouriteMatches: [Int] {
-        return UserDefaults.standard.array(forKey: UserDefaults.Keys.favourites.rawValue) as? [Int] ?? []
+protocol UserDefaultsProtocol {
+    var favouriteMatches: [Int] { get }
+    func set(_ value: Any?, forKey defaultName: String)
+}
+
+extension UserDefaults: UserDefaultsProtocol {
+    var favouriteMatches: [Int] {
+        return array(forKey: UserDefaults.Keys.favourites.rawValue) as? [Int] ?? []
     }
 }

@@ -15,11 +15,17 @@ class MatchesListViewController: UIViewController, FavouritesMatchesDelegateData
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     var favouritesMatchesPerDay: [String : [Match]] {
-        var favourites = matchesViewModel.matchesPerDay.filter { keyValue in
-            return keyValue.value.contains { $0.isFavourite }
+        var favourites = matchesViewModel.matchesPerDay.filter { [weak self] keyValue in
+            return keyValue.value.contains {
+                let isFavourite = self?.matchesViewModel.getIsFavouriteMatch($0) ?? false
+                return isFavourite
+            }
         }
         favourites.keys.forEach { key in
-            favourites[key]?.removeAll { !$0.isFavourite }
+            favourites[key]?.removeAll { [weak self] match in
+                let isFavourite = self?.matchesViewModel.getIsFavouriteMatch(match) ?? true
+                return !isFavourite
+            }
         }
         return favourites
     }
@@ -98,10 +104,13 @@ extension MatchesListViewController: UITableViewDelegate, UITableViewDataSource 
         cell.selectionStyle = .none
         let day = Array(matchesViewModel.matchesPerDay.keys)[indexPath.section]
         guard let match = matchesViewModel.matchesPerDay[day]?[safe: indexPath.row] else { return cell }
+        let isFavourite = matchesViewModel.getIsFavouriteMatch(match)
         let matchCell = cell as? MatchTableViewCell
         matchCell?.setMatch(match)
+        matchCell?.setFavourite(isFavourite)
         matchCell?.toggleFavouriteHandler = { [weak self] in
-            self?.matchesViewModel.setMatch(match.id, isFavourite: !match.isFavourite)
+            guard let isFavourite = self?.matchesViewModel.getIsFavouriteMatch(match) else { return }
+            self?.matchesViewModel.setMatch(match.id, isFavourite: !isFavourite)
             self?.allMatchesTableView.reloadRows(at: [indexPath], with: .none)
             self?.favouriteMatchesTableView.reloadData()
         }
